@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #004466;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .navbar nav {
+    display: none;
+    flex-direction: column;
+    background: #004466;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 10px;
+    width: 150px;
+  }
+  .navbar nav.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Main Content */
+.content {
+  margin-top: 70px;
+  padding: 20px;
+}
+
+/* Theme */
+body.light {
+  background: #f4f4f4;
+  color: #222;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
